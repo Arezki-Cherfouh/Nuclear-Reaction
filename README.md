@@ -1,0 +1,1 @@
+Nuclear Fission Simulator lets you explore nuclear reactions interactively. Use your hands to grab and move particles, bring U-235 and neutrons together to trigger fission, watch energy release and particle products. Supports real-time hand tracking, particle visualization, and reset functionality. Works in Python with OpenCV or in browser with JavaScript.
