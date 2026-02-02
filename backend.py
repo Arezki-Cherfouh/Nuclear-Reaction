@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
 from pydantic import BaseModel
 from groq import Groq
 import os
@@ -85,6 +85,14 @@ async def chat(request: ChatRequest):
         media_type="text/event-stream"
     )
 
+@app.get("/")
+def get():
+    return JSONResponse(content={"message": "Nuclear-Reaction AI API"}, status_code=200)
+
+@app.head("/")
+def ping():
+    return JSONResponse(content={"message": "pong"}, status_code=200)
+    
 @app.get("/health")
 async def health():
     """Health check endpoint"""
