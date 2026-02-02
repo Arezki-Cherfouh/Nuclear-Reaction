@@ -30,7 +30,6 @@ class ChatRequest(BaseModel):
 async def generate_stream(user_message: str, previous_user: Optional[str], previous_ai: Optional[str], summary: Optional[str]):
     """Generate streaming response from Groq"""
     try:
-        # Build context
         messages = []
         
         # Add system message
