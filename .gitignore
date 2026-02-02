@@ -2,3 +2,4 @@ venv/
 .venv/
 pycache/
 *.pyc
+__pycashe__/

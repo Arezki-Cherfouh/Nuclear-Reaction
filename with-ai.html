@@ -1584,14 +1584,14 @@
         update(dt) {
           // Update based on state
           if (this.state === "SETUP") {
-            if (this.rightHandPos && this.rightPinch) {
-              this.uranium.x = this.rightHandPos.x;
-              this.uranium.y = this.rightHandPos.y;
+            if (this.leftHandPos && this.leftPinch) {
+              this.uranium.x = this.leftHandPos.x;
+              this.uranium.y = this.leftHandPos.y;
             }
 
-            if (this.leftHandPos && this.leftPinch) {
-              this.neutron.x = this.leftHandPos.x;
-              this.neutron.y = this.leftHandPos.y;
+            if (this.rightHandPos && this.rightPinch) {
+              this.neutron.x = this.rightHandPos.x;
+              this.neutron.y = this.rightHandPos.y;
             }
 
             // Mouse setup interaction
