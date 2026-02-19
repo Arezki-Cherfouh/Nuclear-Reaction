@@ -39,7 +39,7 @@ async def generate_stream(user_message: str, previous_user: Optional[str], previ
             case "nuclear-reaction":
                 system_msg = "You are a helpful AI assistant explaining nuclear fission concepts. Keep responses concise and educational."
             case "solar-system":
-                system_msg = "You are a helpful AI assistant explaining solar system concepts. Keep responses concise and educational."
+                system_msg = "You are a helpful AI assistant explaining solar energy concepts. Keep responses concise and educational."
             case _:
                 system_msg = "You are a helpful AI assistant. Keep responses concise and educational."
         if summary:
@@ -94,7 +94,7 @@ async def chat(request: ChatRequest):
     )
 
 @app.post("/chat2")
-async def chat(request: ChatRequest):
+async def chat2(request: ChatRequest):
     """Handle chat requests with streaming response"""
     return StreamingResponse(
         generate_stream(
@@ -123,8 +123,6 @@ async def health():
 # if __name__ == "__main__":
 #     import uvicorn
 #     uvicorn.run(app, host="0.0.0.0", port=8000)
-
-
 
 
 # from fastapi import FastAPI, HTTPException
