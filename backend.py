@@ -12,7 +12,7 @@ app = FastAPI()
 # Enable CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://nuclear-reaction.vercel.app","https://arezki-cherfouh.github.io/Solar-Energy-Simulator"],
+    allow_origins=["https://nuclear-reaction.vercel.app","https://arezki-cherfouh.github.io/Solar-Energy-Simulator","https://arezki-cherfouh.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
